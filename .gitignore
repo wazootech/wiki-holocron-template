@@ -1,5 +1,5 @@
-dist/
-node_modules/
-.pytest_cache/
-__pycache__/
-.venv/
+.env
+node_modules
+dist
+.vite
+*.tsbuildinfo
