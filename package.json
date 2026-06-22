@@ -1,0 +1,21 @@
+{
+  "name": "wiki-mintlify-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "node dist/rsc/index.js",
+    "sync": "bash scripts/sync-docs.sh"
+  },
+  "dependencies": {
+    "@holocron.so/vite": "latest",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "vite": "^8.0.10"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3"
+  }
+}

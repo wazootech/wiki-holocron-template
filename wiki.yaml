@@ -1,0 +1,17 @@
+wiki:
+  inputs:
+    - wiki
+  filename_pattern: "[A-Za-z0-9_()-]+\\.md"
+
+graph:
+  content_predicate: schema:articleBody
+  context:
+    schema: https://schema.org/
+    wiki: https://holocron.so/wiki/
+
+link:
+  style: standard
+
+lint:
+  broken_links: warning
+  filename_pattern: warning
