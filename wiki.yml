@@ -3,10 +3,10 @@
 wiki:
   # Markdown and data directories to index (relative to this file).
   inputs:
-    - wiki
+    - src
   # Static files for custom CSS, logos, favicons (copied on wiki build).
   assets:
-    - assets
+    - public
   # Full-filename regex for markdown files (lint.filename_pattern severity).
   filename_pattern: "[A-Za-z0-9_()-]+\\.md"
   # Glob patterns skipped when indexing (POSIX paths relative to config root).

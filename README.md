@@ -35,7 +35,7 @@ A semantic markdown knowledge base powered by the Wiki CLI.
 ## Wiki layout
 
 - `wiki.yml` — Wiki configuration, namespace prefixes, and `fmt` defaults.
-- `wiki/` — Contains markdown files with semantic frontmatter.
+- `src/` — Contains markdown files with semantic frontmatter (shared with Holocron).
   - `Person_Shape.md` — SHACL shape for Person documents.
   - `Ethan_Davidson.md` — An example Person document.
 
