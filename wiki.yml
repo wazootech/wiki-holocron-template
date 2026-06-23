@@ -4,9 +4,7 @@ wiki:
   # Markdown and data directories to index (relative to this file).
   inputs:
     - src
-  # Static files for custom CSS, logos, favicons (copied on wiki build).
-  assets:
-    - public
+  # assets: [public]     # unused — site is served by Vite/Holocron, not wiki build/serve
   # Full-filename regex for markdown files (lint.filename_pattern severity).
   filename_pattern: "[A-Za-z0-9_()-]+\\.md"
   # Glob patterns skipped when indexing (POSIX paths relative to config root).

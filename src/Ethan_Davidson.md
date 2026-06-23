@@ -1,4 +1,3 @@
-<!-- wiki tweak: replace with your first page -->
 ---
 type: schema:Person
 givenName: Ethan

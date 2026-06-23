@@ -17,8 +17,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Get Started",
-      "href": "/quickstart"
+      "label": "Wiki",
+      "href": "/ethan-davidson"
     }
   },
   "footer": {
@@ -29,28 +29,8 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": ["index", "quickstart"]
-          },
-          {
-            "group": "Guides",
-            "icon": "map",
-            "pages": ["pages", "navigation", "components"]
-          },
-          {
-            "group": "Reference",
-            "icon": "book",
-            "pages": ["theming", "deployment"]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "openapi": "api.yaml"
+        "tab": "Wiki",
+        "pages": ["Ethan_Davidson", "Person_Shape"]
       }
     ],
     "global": {
