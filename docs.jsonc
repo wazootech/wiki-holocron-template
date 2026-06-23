@@ -1,6 +1,6 @@
 {
   "$schema": "https://holocron.so/docs.json",
-  "name": "Wiki CLI",
+  "name": "Wiki Docs",
   "favicon": "/favicon.ico",
   "colors": {
     "primary": "#6366f1"
@@ -12,7 +12,7 @@
     "links": [
       {
         "type": "github",
-        "href": "https://github.com/remorses/holocron"
+        "href": "https://github.com/wazootech/wiki-holocron-template"
       }
     ],
     "primary": {
@@ -23,8 +23,7 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/remorses/holocron",
-      "x": "https://x.com/__morse"
+      "github": "https://github.com/wazootech/wiki-holocron-template"
     }
   },
   "navigation": {
@@ -35,27 +34,17 @@
           {
             "group": "Getting Started",
             "icon": "rocket",
-            "pages": [
-              "index",
-              "quickstart"
-            ]
+            "pages": ["index", "quickstart"]
           },
           {
             "group": "Guides",
             "icon": "map",
-            "pages": [
-              "pages",
-              "navigation",
-              "components"
-            ]
+            "pages": ["pages", "navigation", "components"]
           },
           {
             "group": "Reference",
             "icon": "book",
-            "pages": [
-              "theming",
-              "deployment"
-            ]
+            "pages": ["theming", "deployment"]
           }
         ]
       },
@@ -68,13 +57,13 @@
       "anchors": [
         {
           "anchor": "GitHub",
-          "href": "https://github.com/remorses/holocron",
+          "href": "https://github.com/wazootech/wiki-holocron-template",
           "icon": "github",
           "placement": "tabs"
         },
         {
           "anchor": "Changelog",
-          "href": "https://github.com/remorses/holocron/releases",
+          "href": "https://github.com/wazootech/wiki-holocron-template/releases",
           "icon": "newspaper",
           "placement": "tabs"
         }
