@@ -18,17 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-        env:
-          GH_PAGES: "true"
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - name: Build and prerender
+        continue-on-error: true
+        run: bunx holocron deploy
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: dist/.holocron/client
 
   deploy:
     needs: build
