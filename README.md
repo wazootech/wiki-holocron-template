@@ -16,26 +16,36 @@ bun dev         # or: pnpm dev / npm run dev
 
 Edit MDX pages in `src/`, configure navigation and theming in `docs.jsonc`.
 
-## Deploy
+## Deploy to Vercel
 
-Connected via GitHub to Vercel — push to `master` to auto-deploy.
+Push to `master` — deploys automatically via the `vercel.json` config.
 
-### One-time Vercel setup
+### One-time setup
 
 1. Push this repo to GitHub
 2. Go to [vercel.com/new](https://vercel.com/new) and import the repo
-3. Click **Deploy** (no config needed)
+3. Click **Deploy**
 
-### Manual deploy (CLI)
+### Manual (CLI)
 
 ```bash
 npx vercel --prod
 ```
 
-## Learn More
+### Known issue
 
-- [Holocron docs](https://holocron.so)
-- [Vercel docs](https://vercel.com/docs)
+Spiceflow (Holocron's RSC framework) has a bug where its Vercel handler calls `AbortSignal.any([request.signal, ...])` but Vercel passes `request.signal = undefined`. The post-build script `scripts/patch-vercel-handler.mjs` patches the bundled output. If you upgrade `@holocron.so/vite` and see 500 errors, re-run the patch or check if the upstream fix is no longer needed.
+
+## Project structure
+
+| Path | Purpose |
+|------|---------|
+| `src/*.md` | MDX pages (shared with wiki CLI) |
+| `docs.jsonc` | Holocron nav, colors, theme |
+| `wiki.yml` | Wiki CLI config (standalone) |
+| `vercel.json` | Vercel build config |
+| `scripts/patch-vercel-handler.mjs` | Fixes Spiceflow/Vercel signal bug |
+| `.github/workflows/` | CI deploy workflows |
 
 # My Wiki
 
@@ -69,15 +79,13 @@ A semantic markdown knowledge base powered by the Wiki CLI.
 
 ---
 
-## First-time setup (from scratch)
-
-If you're cloning this repo fresh to start your own wiki + docs site:
+## First-time setup
 
 ```bash
 git clone <your-repo-url>
-cd wiki-holocron-template
+cd <repo>
 bun install
 ```
 
-Then follow the Deploy steps above to authenticate, create a project, and set up CI.
+Edit pages in `src/`, then push to `master` — Vercel auto-deploys.
 
