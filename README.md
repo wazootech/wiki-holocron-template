@@ -24,12 +24,16 @@ Push to `master` — deploys automatically via the `vercel.json` config.
 
 1. Push this repo to GitHub
 2. Go to [vercel.com/new](https://vercel.com/new) and import the repo
-3. Click **Deploy**
+3. Click **Deploy** (build will succeed, but AI chat won't work until step 4)
+4. Add `HOLOCRON_KEY` to Vercel environment variables:
+   - In the Vercel dashboard, go to your project → **Settings** → **Environment Variables**
+   - Create a key `HOLOCRON_KEY` with the API key value from `holocron keys create`
+   - Deploy the project again (the key is only needed for AI features, not page rendering)
 
 ### Manual (CLI)
 
 ```bash
-npx vercel --prod
+npx vercel -e HOLOCRON_KEY=holo_xxx --prod
 ```
 
 ### Known issue
