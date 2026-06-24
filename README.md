@@ -18,52 +18,28 @@ Edit MDX pages in `src/`, configure navigation and theming in `docs.jsonc`.
 
 ## Deploy
 
-This template ships with a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds and deploys to Holocron on every push to `master`. To set it up for your own repo:
+This template is pre-configured for Vercel. Connect your GitHub repo to Vercel and it Just Works.
 
-### 1. Authenticate the Holocron CLI
+### Deploy to Vercel (recommended)
 
-```bash
-npx -y @holocron.so/cli login
-```
+1. Push this repo to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new) and import your repo
+3. Vercel auto-detects the config — no manual settings needed
+4. Click **Deploy**
 
-Opens a browser to log into your Holocron account.
+The `vercel.json` and `api/index.js` in this repo handle everything: the RSC server runs as a serverless function, and all routes are forwarded to it.
 
-### 2. Create a project
-
-```bash
-npx -y @holocron.so/cli projects create --name "Your Docs"
-```
-
-### 3. Create an API key for CI
+### Manual deploy (CLI)
 
 ```bash
-npx -y @holocron.so/cli keys create --name github-actions
-```
-
-Select your project when prompted. Copy the key value (starts with `holo_`).
-
-### 4. Add the key to GitHub Actions secrets
-
-```bash
-# replace the key value with yours
-gh secret set HOLOCRON_KEY --repo your-org/your-repo
-```
-
-**Or** add it in the repo's Settings → Secrets and variables → Actions → New repository secret.
-
-### 5. Push to deploy
-
-Push to `master` — the workflow will build and deploy. Your site URL is printed in the CI logs (e.g. `https://<branch>-<hash>-<project-id>-site.holocron.so`).
-
-### Manual deploy
-
-```bash
-HOLOCRON_KEY=holo_xxx npx -y @holocron.so/cli deploy
+npm run build
+npx vercel --prod
 ```
 
 ## Learn More
 
-Full documentation at [holocron.so](https://holocron.so).
+- [Holocron docs](https://holocron.so) — full documentation
+- [Vercel docs](https://vercel.com/docs) — deployment platform
 
 # My Wiki
 
