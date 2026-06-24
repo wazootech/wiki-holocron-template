@@ -18,28 +18,24 @@ Edit MDX pages in `src/`, configure navigation and theming in `docs.jsonc`.
 
 ## Deploy
 
-This template is pre-configured for Vercel. Connect your GitHub repo to Vercel and it Just Works.
+Connected via GitHub to Vercel — push to `master` to auto-deploy.
 
-### Deploy to Vercel (recommended)
+### One-time Vercel setup
 
 1. Push this repo to GitHub
-2. Go to [vercel.com/new](https://vercel.com/new) and import your repo
-3. Vercel auto-detects the config — no manual settings needed
-4. Click **Deploy**
-
-The `vercel.json` and `api/index.js` in this repo handle everything: the RSC server runs as a serverless function, and all routes are forwarded to it.
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repo
+3. Click **Deploy** (no config needed)
 
 ### Manual deploy (CLI)
 
 ```bash
-npm run build
 npx vercel --prod
 ```
 
 ## Learn More
 
-- [Holocron docs](https://holocron.so) — full documentation
-- [Vercel docs](https://vercel.com/docs) — deployment platform
+- [Holocron docs](https://holocron.so)
+- [Vercel docs](https://vercel.com/docs)
 
 # My Wiki
 
