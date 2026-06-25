@@ -40,7 +40,7 @@ site:
 # wiki link command output format and rename repair map.
 link:
   # standard page links or wikilinks (wiki link --apply).
-  style: standard
+  style: markdown
   # renames:
   #   Old_Page_Name: New_Page_Name
 
