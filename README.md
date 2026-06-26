@@ -93,3 +93,21 @@ bun install
 
 Edit pages in `src/`, then push to `master` — Vercel auto-deploys.
 
+
+## Deployment
+
+### GitHub Pages (preferred)
+
+Push to `master` — CI validates the wiki and deploys the Holocron site. Enable **Settings → Pages → Source: GitHub Actions** if not already active.
+
+### Vercel
+
+1. Import this repo at [vercel.com/new](https://vercel.com/new)
+2. Vercel auto-detects `vercel.json` — default settings work
+3. Add `HOLOCRON_KEY` environment variable for AI features (optional)
+4. Deploy
+
+### Netlify / Cloudflare Pages
+
+- **Build command:** `npm ci && npm run build && node scripts/patch-vercel-handler.mjs` (omit the patch script if not on Vercel)
+- **Publish directory:** `dist`
