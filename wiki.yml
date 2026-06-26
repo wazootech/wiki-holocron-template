@@ -38,13 +38,7 @@ site:
   url_style: dir
 
 # wiki link command output format and rename repair map.
-link:
-  # standard page links or wikilinks (wiki link --apply).
-  style: markdown
-  # renames:
-  #   Old_Page_Name: New_Page_Name
 
-# Integrity severities (wiki check): SHACL, JSON Schema, routes, layout files.
 check:
   # Error when wazoo:layout points at a missing .html file.
   missing_layout_file: error
